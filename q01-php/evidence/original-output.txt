@@ -1,0 +1,11 @@
+PHP Fatal error:  Uncaught Error: Call to undefined function WP_Query() in /Users/user/Downloads/bcm-test/q01-php/original.php:4
+Stack trace:
+#0 /Users/user/Downloads/bcm-test/q01-php/tests/render.php(21): include()
+#1 {main}
+  thrown in /Users/user/Downloads/bcm-test/q01-php/original.php on line 4
+
+Fatal error: Uncaught Error: Call to undefined function WP_Query() in /Users/user/Downloads/bcm-test/q01-php/original.php:4
+Stack trace:
+#0 /Users/user/Downloads/bcm-test/q01-php/tests/render.php(21): include()
+#1 {main}
+  thrown in /Users/user/Downloads/bcm-test/q01-php/original.php on line 4

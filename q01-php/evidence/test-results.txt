@@ -1,0 +1,34 @@
+== Missing parameters (?) ==
+PASS  no PHP warnings/notices
+PASS  heading says Page 1 of 3, no search text
+PASS  exactly 10 posts
+PASS  first post is Post 1
+== Page 2 (?page=2) ==
+PASS  no PHP warnings/notices
+PASS  heading says Page 2 of 3
+PASS  10 posts, Post 11 to Post 20
+PASS  pagination marks page 2 as current
+== Search filter (?s=lagos) ==
+PASS  only the 5 matching posts
+PASS  heading shows search term and Page 1 of 1
+== No search results (?s=zzz-nothing) ==
+PASS  no PHP warnings/notices
+PASS  no articles, friendly message shown
+PASS  heading still valid: Page 1 of 1
+== Multiple [ad] markers ==
+PASS  no PHP warnings/notices
+PASS  5 ad divs across 2 posts
+PASS  slots numbered 1..5 uniquely across posts
+PASS  no literal [ad] left
+PASS  ordinary letters a/d untouched ("Middle about data")
+PASS  lookalikes [AD] and [ad 3] left alone
+PASS  ad divs appear inside the article, not before the heading
+== Hostile input ==
+PASS  no raw <script> in output
+PASS  negative/garbage page clamped to Page 1, no errors
+== Page beyond the end (?page=99) ==
+PASS  shows no-results message instead of erroring
+== Original code, for comparison ==
+PASS  original fails with a fatal error (as described in ANSWER.md)
+
+24 passed, 0 failed

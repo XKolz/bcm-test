@@ -1,0 +1,16 @@
+✔ timeout AFTER the provider accepted: retry finds it, exactly one record (2.62793ms)
+✔ same case with a provider that IGNORES idempotency keys: still no duplicate (0.354303ms)
+✔ rate limit twice, then success: honours Retry-After, one record (0.911111ms)
+✔ rate limited on every attempt: kept as pending_retry, nothing lost (1.666694ms)
+✔ invalid email (local check): never sent, never retried (0.499315ms)
+✔ invalid email (provider says 422): rejected after one call, no retry (0.309524ms)
+✔ running the job twice on a finished signup does nothing (0.255158ms)
+✔ logs never contain the email address (0.257393ms)
+ℹ tests 8
+ℹ suites 0
+ℹ pass 8
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 92.098448

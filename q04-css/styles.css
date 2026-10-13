@@ -1,0 +1,99 @@
+/* Q4 layout. Mobile first: one column, then a 3-column grid from 48rem (768px). */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font: 1rem/1.5 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  color: #1b1b1b;
+  background: #f4f4f1;
+}
+
+.layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr); /* minmax(0, …) lets long content shrink instead of overflowing */
+  gap: 1rem;
+  max-width: 72rem;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+.box {
+  min-width: 0;
+  padding: 1rem 1.25rem;
+  background: #fff;
+  border: 2px solid #1b1b1b;
+  border-radius: 6px;
+}
+
+.box h2 {
+  margin: 0 0 0.5rem;
+  font-size: 1.5rem;
+  line-height: 1.2;
+  overflow-wrap: anywhere; /* long headlines and long single words wrap rather than overflow */
+  hyphens: auto;
+}
+
+.box p {
+  margin: 0;
+}
+
+.box a:focus-visible {
+  outline: 3px solid #0b57d0;
+  outline-offset: 2px;
+}
+
+/* Visual identification of each section (not required, helps the screenshots). */
+.a { background: #fde8c8; }
+.b { background: #d7ecff; }
+.c { background: #e3f6dc; }
+.d { background: #f3dcf6; }
+.e { background: #fff6b8; }
+.f { background: #ffd9d9; }
+.g { background: #d9f3f1; }
+.h { background: #e4e4e4; }
+
+/* ---------- Mobile (default): A, D, B, C, G — E, F, H hidden ---------- */
+.desktop-only {
+  display: none; /* also removes them from the tab order and the accessibility tree */
+}
+
+.a { order: 1; }
+.d { order: 2; }
+.b { order: 3; }
+.c { order: 4; }
+.g { order: 5; }
+
+/* ---------- Desktop ---------- */
+@media (min-width: 48rem) {
+  .layout {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    grid-template-areas:
+      "a a b"
+      "c d e"
+      "f g h";
+    gap: 1.25rem;
+    padding: 1.5rem;
+  }
+
+  .desktop-only {
+    display: block;
+  }
+
+  .a { grid-area: a; }
+  .b { grid-area: b; }
+  .c { grid-area: c; }
+  .d { grid-area: d; }
+  .e { grid-area: e; }
+  .f { grid-area: f; }
+  .g { grid-area: g; }
+  .h { grid-area: h; }
+
+  .box {
+    order: 0; /* desktop visual order = source order */
+  }
+}

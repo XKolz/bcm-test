@@ -1,0 +1,16 @@
+# Original code with only the two fatal errors patched (new WP_Query, $content passed),
+# showing the remaining runtime problems. Request: ?s=Lagos
+<h1>Page 1 of 
+Warning: Undefined variable $pages in /home/claude/bcm-test/q01-php/tests/original-step3.php on line 10
+ : Search for Lagos
+Warning: Undefined variable $m in /home/claude/bcm-test/q01-php/tests/original-step3.php on line 17
+
+Warning: Trying to access array offset on null in /home/claude/bcm-test/q01-php/tests/original-step3.php on line 17
+<div class="ad ad-"></div><h2>Post 5 about Lagos</h2>
+<p>Boy of post 5.</p>
+
+Warning: Undefined variable $m in /home/claude/bcm-test/q01-php/tests/original-step3.php on line 17
+
+Warning: Trying to access array offset on null in /home/claude/bcm-test/q01-php/tests/original-step3.php on line 17
+<div class="ad ad-"></div><h2>Post 10 about Lagos</h2>
+<p>Boy of post 10.</p>

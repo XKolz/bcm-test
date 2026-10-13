@@ -1,0 +1,28 @@
+== desktop (1280px)
+  visual order (top-left to bottom-right): A B C D E F G H
+  hidden: none
+  widths: A=729, B=355, C=355, D=355, E=355, F=355, G=355, H=355
+  keyboard Tab order: A B C D E F G H
+  horizontal overflow: False
+  long heading C fits its box (no overflow): True
+== tablet-768 (768px)
+  visual order (top-left to bottom-right): A B C D E F G H
+  hidden: none
+  widths: A=473, B=227, C=227, D=227, E=227, F=227, G=227, H=227
+  keyboard Tab order: A B C D E F G H
+  horizontal overflow: False
+  long heading C fits its box (no overflow): True
+== mobile (375px)
+  visual order (top-left to bottom-right): A D B C G
+  hidden: E F H
+  widths: A=343, B=343, C=343, D=343, G=343
+  keyboard Tab order: A B C D G
+  horizontal overflow: False
+  long heading C fits its box (no overflow): True
+== mobile-320 (320px)
+  visual order (top-left to bottom-right): A D B C G
+  hidden: E F H
+  widths: A=288, B=288, C=288, D=288, G=288
+  keyboard Tab order: A B C D G
+  horizontal overflow: False
+  long heading C fits its box (no overflow): True

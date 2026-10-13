@@ -1,0 +1,13 @@
+{
+  "name": "bcm-developer-test",
+  "version": "1.0.0",
+  "description": "BCM developer test submission",
+  "scripts": {
+    "test": "php q01-php/tests/test.php && node --test q09-api/subscribe.test.js"
+  },
+  "dependencies": {
+    "jsdom": "^29.1.1",
+    "vnu-jar": "^26.10.12"
+  },
+  "private": true
+}

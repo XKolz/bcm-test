@@ -1,0 +1,89 @@
+== 1. Initial load
+[load] 3 paragraphs: Cras Integ HR Duis*
+  PASS  separator after every pair, none at the end (hidden ones counted)
+  PASS  all 1 image paragraphs visible
+  PASS  paragraphs without images always visible
+  PASS  first three are still the originals in original order
+  PASS  every added batch has each original exactly once
+  PASS  second button exists, created by JS, label 'Hide image paragraphs'
+  PASS  second button is not in the HTML source
+
+== 2. Repeated clicks, images visible
+[after 1 click] 6 paragraphs: Cras Integ HR Duis* Cras HR Integ Duis*
+  PASS  separator after every pair, none at the end (hidden ones counted)
+  PASS  all 2 image paragraphs visible
+  PASS  paragraphs without images always visible
+  PASS  first three are still the originals in original order
+  PASS  every added batch has each original exactly once
+[after 2 clicks] 9 paragraphs: Cras Integ HR Duis* Cras HR Integ Duis* HR Cras Integ HR Duis*
+  PASS  separator after every pair, none at the end (hidden ones counted)
+  PASS  all 3 image paragraphs visible
+  PASS  paragraphs without images always visible
+  PASS  first three are still the originals in original order
+  PASS  every added batch has each original exactly once
+
+== 3. Toggle after adding paragraphs
+[hidden] 9 paragraphs: Cras Integ HR Duis*(hidden) Cras HR Integ Duis*(hidden) HR Cras Integ HR Duis*(hidden)
+  PASS  separator after every pair, none at the end (hidden ones counted)
+  PASS  all 3 image paragraphs hidden
+  PASS  paragraphs without images always visible
+  PASS  first three are still the originals in original order
+  PASS  every added batch has each original exactly once
+  PASS  button now says 'Show image paragraphs', aria-pressed=true
+
+== 4. Add while hidden: new image paragraphs must stay hidden
+[hidden + 1 click] 12 paragraphs: Cras Integ HR Duis*(hidden) Cras HR Integ Duis*(hidden) HR Cras Integ HR Duis*(hidden) Cras HR Duis*(hidden) Integ
+  PASS  separator after every pair, none at the end (hidden ones counted)
+  PASS  all 4 image paragraphs hidden
+  PASS  paragraphs without images always visible
+  PASS  first three are still the originals in original order
+  PASS  every added batch has each original exactly once
+[hidden + 2 clicks] 15 paragraphs: Cras Integ HR Duis*(hidden) Cras HR Integ Duis*(hidden) HR Cras Integ HR Duis*(hidden) Cras HR Duis*(hidden) Integ HR Cras Duis*(hidden) HR Integ
+  PASS  separator after every pair, none at the end (hidden ones counted)
+  PASS  all 5 image paragraphs hidden
+  PASS  paragraphs without images always visible
+  PASS  first three are still the originals in original order
+  PASS  every added batch has each original exactly once
+
+== 5. Show again
+[shown again] 15 paragraphs: Cras Integ HR Duis* Cras HR Integ Duis* HR Cras Integ HR Duis* Cras HR Duis* Integ HR Cras Duis* HR Integ
+  PASS  separator after every pair, none at the end (hidden ones counted)
+  PASS  all 5 image paragraphs visible
+  PASS  paragraphs without images always visible
+  PASS  first three are still the originals in original order
+  PASS  every added batch has each original exactly once
+
+== 6. Toggle BEFORE adding anything (fresh page)
+[fresh, hidden] 3 paragraphs: Cras Integ HR Duis*(hidden)
+  PASS  separator after every pair, none at the end (hidden ones counted)
+  PASS  all 1 image paragraphs hidden
+  PASS  paragraphs without images always visible
+  PASS  first three are still the originals in original order
+  PASS  every added batch has each original exactly once
+[fresh, hidden + 1 click] 6 paragraphs: Cras Integ HR Duis*(hidden) Cras HR Integ Duis*(hidden)
+  PASS  separator after every pair, none at the end (hidden ones counted)
+  PASS  all 2 image paragraphs hidden
+  PASS  paragraphs without images always visible
+  PASS  first three are still the originals in original order
+  PASS  every added batch has each original exactly once
+[fresh, shown] 6 paragraphs: Cras Integ HR Duis* Cras HR Integ Duis*
+  PASS  separator after every pair, none at the end (hidden ones counted)
+  PASS  all 2 image paragraphs visible
+  PASS  paragraphs without images always visible
+  PASS  first three are still the originals in original order
+  PASS  every added batch has each original exactly once
+
+== 7. Stress: 20 clicks with toggles in between; randomness
+[after 20 clicks] 63 paragraphs: Cras Integ HR Duis*(hidden) Integ HR Duis*(hidden) Cras HR Cras Integ HR Duis*(hidden) Cras HR Duis*(hidden) Integ HR Integ Duis*(hidden) HR Cras Integ HR Duis*(hidden) Cras HR Duis*(hidden) Cras HR Integ Integ HR Cras Duis*(hidden) HR Duis*(hidden) Integ HR Cras Duis*(hidden) HR Cras Integ HR Integ Duis*(hidden) HR Cras Cras HR Integ Duis*(hidden) HR Cras Duis*(hidden) HR Integ Cras HR Duis*(hidden) Integ HR Integ Duis*(hidden) HR Cras Cras HR Duis*(hidden) Integ HR Integ Duis*(hidden) HR Cras Integ HR Cras Duis*(hidden) HR Duis*(hidden) Cras HR Integ Integ HR Cras Duis*(hidden) HR Cras Integ HR Duis*(hidden)
+  PASS  separator after every pair, none at the end (hidden ones counted)
+  PASS  all 21 image paragraphs hidden
+  PASS  paragraphs without images always visible
+  PASS  first three are still the originals in original order
+  PASS  every added batch has each original exactly once
+  PASS  63 paragraphs (3 + 20×3)
+  PASS  31 separators for 63 paragraphs (got 31)
+  distinct batch orders seen in 20 clicks: 6 of 6 possible
+  PASS  copies are actually shuffled (more than one order seen)
+  PASS  no JavaScript errors
+
+ALL CHECKS PASSED

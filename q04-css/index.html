@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Q4 layout: desktop and mobile</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="layout">
+    <section class="box a" aria-labelledby="h-a">
+      <h2 id="h-a">A</h2>
+      <p>Spans two columns on desktop. <a href="#a">Read A</a></p>
+    </section>
+    <section class="box b" aria-labelledby="h-b">
+      <h2 id="h-b">B</h2>
+      <p>Right of A on desktop, third on mobile. <a href="#b">Read B</a></p>
+    </section>
+    <section class="box c" aria-labelledby="h-c">
+      <!-- Long heading check: a realistic long headline plus a long unbroken word. -->
+      <h2 id="h-c">C: Lagos commuters count the cost as fuel prices climb for the third consecutive month despite assurances from regulators (Supercalifragilisticexpialidocious)</h2>
+      <p>Narrow column on desktop. <a href="#c">Read C</a></p>
+    </section>
+    <section class="box d" aria-labelledby="h-d">
+      <h2 id="h-d">D</h2>
+      <p>Second on mobile. <a href="#d">Read D</a></p>
+    </section>
+    <section class="box e desktop-only" aria-labelledby="h-e">
+      <h2 id="h-e">E</h2>
+      <p>Hidden on mobile. <a href="#e">Read E</a></p>
+    </section>
+    <section class="box f desktop-only" aria-labelledby="h-f">
+      <h2 id="h-f">F</h2>
+      <p>Hidden on mobile. <a href="#f">Read F</a></p>
+    </section>
+    <section class="box g" aria-labelledby="h-g">
+      <h2 id="h-g">G</h2>
+      <p>Last on both layouts. <a href="#g">Read G</a></p>
+    </section>
+    <section class="box h desktop-only" aria-labelledby="h-h">
+      <h2 id="h-h">H</h2>
+      <p>Hidden on mobile. <a href="#h">Read H</a></p>
+    </section>
+  </main>
+</body>
+</html>
